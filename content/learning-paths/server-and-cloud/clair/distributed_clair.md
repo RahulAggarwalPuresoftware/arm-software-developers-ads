@@ -27,6 +27,7 @@ Download Clair v4.5.1:
 ```console
 wget https://github.com/quay/clair/releases/download/v4.5.1/clair-v4.5.1.tar.gz
 tar -xvf clair-v4.5.1.tar.gz
+cd clair-v4.5.1
 ```
 
 Execute below command to setup postgres database:
