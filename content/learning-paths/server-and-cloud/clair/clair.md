@@ -11,6 +11,7 @@ layout: "learningpathall"
 ## What is Clair
 
 [Clair](https://github.com/quay/clair) is an application for parsing image contents and reporting vulnerabilities affecting the contents. This is done via static analysis and not at runtime.
+
 Clair supports the extraction of contents and assignment of vulnerabilities from the following official base containers:
 
 * Ubuntu
@@ -54,12 +55,16 @@ Clair uses PostgreSQL for its data persistence. Migrations are supported so you 
 
 ### Combined Deployment
 
+![combo_mode_clair_pics](https://user-images.githubusercontent.com/87687089/213428835-6e54ee7e-885c-4114-9123-348e162924b2.PNG)
+
 In a combined deployment, all the Clair processes run in a single OS process. This is by far the easiest deployment model to configure as it involves the least moving parts. To configure this model you will provide all node types the same database and start Clair in combo mode.
 In this mode, any configuration informing Clair how to talk to other nodes is ignored, it is not needed as all intra-process communication is done directly.
 For added flexibility, it's also supported to split the databases while in combo mode.
 Since Clair is conceptually a set of micro-services, its processes do not share database tables even when combined into the same OS process.
 
 ### Distributed Deployment
+
+![distributive_mode_clair_pic](https://user-images.githubusercontent.com/87687089/213429015-2a574d77-cf44-4310-a003-99e7afacded2.PNG)
 
 If your application needs to asymmetrically scale or you expect high load you may want to consider a distributed deployment.
 In a distributed deployment, each Clair process runs in its own OS process. Typically this will be a Kubernetes or OpenShift Pod.
