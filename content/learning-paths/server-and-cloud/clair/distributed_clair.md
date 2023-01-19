@@ -55,7 +55,8 @@ sudo docker ps
 
 Below is the output:
 
-![docker_ps_pic](https://user-images.githubusercontent.com/87687089/213429864-65d331e0-4542-4624-8b3e-ea9796cb4dd1.PNG)
+![docker_ps_pic](https://user-images.githubusercontent.com/87687089/213442748-e9c25ea8-3b55-4395-87a9-92c671a288e8.PNG)
+
 
 To check logs in each of the Clair's service:
 
