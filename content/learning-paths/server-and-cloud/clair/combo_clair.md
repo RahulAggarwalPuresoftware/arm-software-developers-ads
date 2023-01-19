@@ -42,6 +42,10 @@ Next, setup the postgres service as below:
 sudo docker-compose up -d clair-database
 ```
 
+We can view the running postgres service with "$docker ps". Below is the output:
+
+![postgres_pic](https://user-images.githubusercontent.com/87687089/213429629-e17cdc91-65bd-43e0-982c-492fcd63200f.PNG)
+
 Clair uses a configuration file to configure indexer, matcher and notifier. In the combo mode, we will configure indexer, matcher and notifier to communicate to postgres service exposed to port 5432 on localhost. We will use the configuration file present at `clair/local-dev/clair/config.yaml`, and modify the connstring of indexer, matcher and notifier as below:
 
 ```console
