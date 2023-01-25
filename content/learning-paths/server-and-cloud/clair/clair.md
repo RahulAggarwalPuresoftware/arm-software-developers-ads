@@ -28,7 +28,7 @@ The above list defines Clair's current support matrix.
 
 ## How Clair Works
 
-Clair can run in several modes - Indexer, matcher, notifier or combo mode. In combo mode, everything runs in a single OS process.
+Clair can run in several modes - Indexer, matcher, notifier or combined mode. In combined mode, everything runs in a single OS process.
 Clair's analysis is broken into three distinct parts.
 
 ### Indexing
