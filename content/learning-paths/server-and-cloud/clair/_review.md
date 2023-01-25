@@ -13,7 +13,7 @@
 review:
     - questions:
         question: >
-            In the combo mode, Clair creates 3 different OS processes for all 3 modes.
+            In the combined mode, Clair creates 3 different OS processes for all 3 modes.
         answers:
             - "True"
             - "False"
