@@ -16,7 +16,7 @@ layout: "learningpathall"
 
 ## Install and run Clair in the Combo Mode
 
-In a combined deployment, all the Clair services run in a single OS process. This is the easiest deployment model to configure as it involves the least moving parts.
+In combined deployment, all Clair services run in a single OS process. This is the easiest deployment model to configure as it involves limited resources.
 
 NOTE: The below mentioned steps are tested successfully with Clair v4.5.1.
 
@@ -30,7 +30,7 @@ tar -xvf clair-v4.5.1.tar.gz
 cd clair-v4.5.1
 ```
 
-We will setup a postgres database for Clair to store all the vulnerabilities specific to containers. `docker-compose.yaml` already has a target "clair-database" to setup a postgres database for Clair. For the combo mode, since postgres service will run inside a private container network and Clair service runs on localhost, we are required to expose postgres port 5432 to localhost. To do so, add the following to "clair-database" target in `docker-compose.yaml` file.
+We will setup a postgres database for Clair to store all vulnerabilities specific to containers. The `docker-compose.yaml` already has a target "clair-database" to setup a postgres database for Clair. For combined mode, since postgres service will run inside a private container network and Clair service runs on localhost, we are required to expose postgres port 5432 to localhost. To do so, add the following to "clair-database" target in `docker-compose.yaml` file.
 
 ```console
 ports:
@@ -48,7 +48,7 @@ We can view the running postgres service with `docker ps`. Below is the output:
 ![postgres_pic](https://user-images.githubusercontent.com/87687089/213442653-79fd8b49-12ce-44e7-a82f-1cfd32665c5e.PNG)
 
 
-Clair uses a configuration file to configure indexer, matcher and notifier. In the combo mode, we will configure indexer, matcher and notifier to communicate to postgres service exposed to port 5432 on localhost. We will use the configuration file present at `clair/local-dev/clair/config.yaml`, and modify the connstring of indexer, matcher and notifier as below:
+Clair uses a configuration file to configure indexer, matcher and notifier. In combined mode, we will configure indexer, matcher and notifier to communicate to postgres service exposed to port 5432 on localhost. We will use the configuration file present at `clair/local-dev/clair/config.yaml`, and modify the `connstring` of indexer, matcher and notifier as below:
 
 ```console
 indexer:
@@ -69,10 +69,10 @@ sudo go build ./cmd/clair
 
 This will generate a Clair binary in the root of the repo.
 
-Now that the postgres service is running and Clair's configuration is ready, run Clair in the combo mode as below:
+Now the postgres service is running and Clair's configuration is ready, run Clair in the combined mode as below:
 
 ```console
 ./clair -conf "./local-dev/clair/config.yaml" -mode "combo"
 ```
 
-The running logs on your screen confirms that Clair is running successfully in the combo mode. You can now open a new terminal and submit the manifest to generate the vulnerability report.
+The running logs on your screen confirms that Clair is running successfully in the combined mode. You can now open a new terminal and submit the manifest to generate the vulnerability report.
