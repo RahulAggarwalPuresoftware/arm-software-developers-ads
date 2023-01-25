@@ -19,7 +19,7 @@ review:
             - "False"
         correct_answer: 2
         explanation: >
-            In a combined deployment, all the Clair processes run in a single OS process. While in a distributed deployment, each Clair process runs in its own OS process.
+            In combined deployment, the Clair processes run in single OS process. Whereas in distributed deployment, each Clair process runs in its own OS processes.
 
     - questions:
         question: >
