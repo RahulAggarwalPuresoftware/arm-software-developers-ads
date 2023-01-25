@@ -1,14 +1,14 @@
 ---
 title: Generate the vulnerability report using Clair on Arm
 
-description: Learn how to run Clair in the combo and the distributed mode, submit the containers to Clair and generate the Vulnerability report that can affect the content.
+description: Learn how to run Clair in the combined and the distributed mode, submit the containers to Clair and generate the Vulnerability report that can affect the content.
 
 minutes_to_complete: 60
 
 who_is_this_for: Developers looking to check the vulnerabilities that can affect their containers.
 
 learning_objectives:
-    - Install and run Clair in both "combo" and "distributed" mode.
+    - Install and run Clair in both "combined" and "distributed" mode.
     - Submit the containers to Clair using clairctl and generate the vulnerability report.
 
 prerequisites:
