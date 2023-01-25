@@ -4,7 +4,7 @@
 # ================================================================================
 
 next_step_guidance: >
-    We recommend you continue learning about migrating applications to Arm.
+    We recommend you to continue learning about migrating applications to Arm.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: "/learning-paths/server-and-cloud/migration/"
@@ -22,7 +22,7 @@ further_reading:
         link: https://quay.github.io/clair/
         type: documentation
     - resource:
-        title: Amazon EC2 C7g Instances, Powered by AWS Graviton3 Processors
+        title: Amazon EC2 C7g Instances powered by AWS Graviton3 processors
         link: https://aws.amazon.com/blogs/aws/new-amazon-ec2-c7g-instances-powered-by-aws-graviton3-processors/
         type: Blog
 
