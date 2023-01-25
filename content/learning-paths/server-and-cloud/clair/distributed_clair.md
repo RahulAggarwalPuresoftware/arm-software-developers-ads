@@ -16,7 +16,7 @@ layout: "learningpathall"
 
 ## Install and run Clair in the Distributed Mode
 
-In a distributed deployment, each Clair service i.e. indexer, matcher and notifier, runs in it's own OS process. `docker-compose.yaml` already has targets defined to run these 3 services. Unlike the Combo mode, all 3 services will run inside containers. So, there is no need to expose postgres port 5432, as all 3 services of Clair are in same container network as postgres.
+In distributed deployment, each Clair service i.e. indexer, matcher and notifier, runs in its own OS process. The `docker-compose.yaml` already has targets defined to run these 3 services. Unlike Combined mode, all three services will run inside containers. So, there is no need to expose postgres port 5432, as all three services of Clair are in same container network as postgres.
 
 NOTE: The below mentioned steps are tested successfully with Clair v4.5.1.
 
@@ -30,7 +30,7 @@ tar -xvf clair-v4.5.1.tar.gz
 cd clair-v4.5.1
 ```
 
-Execute below command to setup postgres database:
+Execute the below command to setup postgres database:
 
 ```console
 sudo docker-compose up -d clair-database
@@ -42,13 +42,13 @@ We will need a load balancer to divert traffic to the correct service i.e. index
 sudo docker-compose up -d traefik
 ```
 
-Next, run indexer, matcher and notifier as 3 separate processes. `docker-compose.yaml` already has targets defined for the same.
+Next, run indexer, matcher and notifier as three separate processes. The `docker-compose.yaml` already has targets defined for the same.
 
 ```console
 sudo docker-compose up -d indexer matcher notifier
 ```
 
-You can verify if all 5 containers, i.e. clair-database, traefik, indexer, matcher, notifier, are running, using docker CLI:
+You can verify using docker CLI if all five containers, i.e. clair-database, traefik, indexer, matcher, notifier, are running:
 
 ```console
 sudo docker ps
