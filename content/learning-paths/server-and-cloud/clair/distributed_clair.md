@@ -16,7 +16,7 @@ layout: "learningpathall"
 
 ## Install and run Clair in the Distributed Mode
 
-In distributed deployment, each Clair service i.e. indexer, matcher and notifier, runs in its own OS process. The `docker-compose.yaml` already has targets defined to run these 3 services. Unlike Combined mode, all three services will run inside containers. So, there is no need to expose postgres port 5432, as all three services of Clair are in same container network as postgres.
+In distributed deployment, each Clair service i.e. indexer, matcher and notifier, runs in its own OS process. The `docker-compose.yaml` already has targets defined to run these three services. Unlike Combined mode, all three services will run inside containers. So, there is no need to expose postgres port 5432, as all three services of Clair are in same container network as postgres.
 
 NOTE: The below mentioned steps are tested successfully with Clair v4.5.1.
 
