@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Clair in the combo mode"
+title: "Clair in the combined mode"
 
 weight: 3 # 1 is first, 2 is second, etc.
 
@@ -14,7 +14,7 @@ layout: "learningpathall"
 * [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/linux/) (latest version preferred).
 * [go](https://go.dev/doc/install) (latest version preferred).
 
-## Install and run Clair in the Combo Mode
+## Install and run Clair in the Combined Mode
 
 In combined deployment, all Clair services run in a single OS process. This is the easiest deployment model to configure as it involves limited resources.
 
