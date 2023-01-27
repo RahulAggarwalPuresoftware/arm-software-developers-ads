@@ -12,7 +12,7 @@ learning_objectives:
     - Submit the containers to Clair using clairctl and generate the vulnerability report.
 
 prerequisites:
-    - An AWS account.
+    - Cloud node or physical machine.
     - docker and docker-compose (latest version preferred).
     - go (latest version preferred).
 
