@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ## Prerequisites
 
-* Cloud node or physical machine.
+* Cloud node or a physical machine.
 * [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/linux/) (latest version preferred).
 * [go](https://go.dev/doc/install) (latest version preferred).
 
@@ -19,8 +19,6 @@ layout: "learningpathall"
 In distributed deployment, each Clair service i.e. indexer, matcher and notifier, runs in its own OS process. The `docker-compose.yaml` already has targets defined to run these three services. Unlike Combined mode, all three services will run inside containers. So, there is no need to expose postgres port 5432, as all three services of Clair are in same container network as postgres.
 
 NOTE: The below mentioned steps are tested successfully with Clair v4.5.1.
-
-Using your AWS Account, launch an Arm 64-bit instance running Ubuntu. Refer [this](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/learning-paths/server-and-cloud/aws/gui.md) for more details.
 
 Download Clair v4.5.1:
 
